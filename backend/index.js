@@ -13,11 +13,14 @@ const app = express();
 const PORT = 5000;
 
 // ✅ Use CORS Middleware
+const cors = require("cors");
+
 app.use(cors({
-  origin: ["https://spotmark-2qpu.vercel.app"], // Allow only frontend domain
+  origin: ["https://spotmark-2qpu-git-main-ashwini-ss-projects.vercel.app"], // Allow frontend
   methods: ["GET", "POST", "PATCH", "DELETE", "PUT"],
   allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "Authorization"]
 }));
+
 
 app.use(bodyParser.json());
 
