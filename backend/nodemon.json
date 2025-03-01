@@ -1,8 +1,6 @@
 {
     "env":{
-        "DB_USER":"achu",
-        "DB_PASSWORD":"sainath",
-        "DB_NAME":"places",
+        "URL":"mongodb+srv://achu:sainath@cluster0.4ruxd.mongodb.net/places?retryWrites=true&w=majority&appName=Cluster0",
         "KEY":"supersecret"
     }
 }

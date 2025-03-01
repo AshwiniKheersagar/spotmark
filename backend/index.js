@@ -47,7 +47,7 @@ app.use((error, req, res, next) => {
     .json({ message: error.message || "An unknown error ocurred" });
 });
 
-mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.4ruxd.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority&appName=Cluster0`)
+mongoose.connect(process.env.URL)
   .then(() => {
     app.listen(PORT, () => {
       console.log(`Server Started at port ${PORT}`);
