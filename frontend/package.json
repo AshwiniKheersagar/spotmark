@@ -2,7 +2,7 @@
   "name": "mern",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/AshwiniKheersagar/mern-frontend.git",
+  "homepage": ".",
   "dependencies": {
     "cra-template": "1.2.0",
     "leaflet": "^1.9.4",
