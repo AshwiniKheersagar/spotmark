@@ -1,0 +1,42 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# Backend specific
+backend/node_modules/
+backend/.env
+backend/dist/
+backend/.vercel/
+backend/.out/
+
+# Frontend specific
+frontend/node_modules/
+frontend/.env
+frontend/build/
+frontend/.vercel/
+frontend/.out/
+
+# Logs
+logs/
+*.log
+yarn-error.log
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Coverage & Testing
+coverage/
+jest/
+cypress/
