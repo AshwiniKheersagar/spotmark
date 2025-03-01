@@ -12,9 +12,6 @@ const PORT = 5000;
 
 app.use(bodyParser.json()); //parser the json object into regular js like object,array
 
-app.get("/", (req, res) => {
-  res.send("Backend is running!");
-});
 
 app.use('/uploads/images',express.static(path.join('uploads','images')));
 

@@ -87,18 +87,22 @@ const login = async (req, res, next) => {
   let existingUser;
   try {
     existingUser = await User.findOne({ email: email });
-    
+    if (!existingUser) {
+      return next(new HttpError("User not found. Please sign up first.", 404));
+    }
   } catch (err) {
-    const error = new HttpError(
-      "Logging in failed, please try again later.",
-      500
-    );
-    return next(error);
+    return next(new HttpError("Logging in failed, please try again later.", 500));
   }
 
-  const isValidPassword = await existingUser.verifyPassword(password);
+  let isValidPassword;
+  try {
+    isValidPassword = await existingUser.verifyPassword(password);
+  } catch (err) {
+    return next(new HttpError("Could not check password, please try again.", 500));
+  }
+
   if (!isValidPassword) {
-      return next(new HttpError('Invalid credentials, could not log you in.', 403));
+    return next(new HttpError("Invalid credentials, could not log you in.", 403));
   }
   
   let token;
