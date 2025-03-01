@@ -1,0 +1,8 @@
+{
+    "env":{
+        "DB_USER":"achu",
+        "DB_PASSWORD":"sainath",
+        "DB_NAME":"places",
+        "KEY":"supersecret"
+    }
+}

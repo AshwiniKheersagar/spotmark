@@ -1,0 +1,24 @@
+.map {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Custom Popup Styling */
+  .leaflet-popup-content-wrapper {
+    background-color: #fff;
+    color: #333;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .leaflet-popup-content {
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .leaflet-popup-tip {
+    background-color: white;
+  }
+  
